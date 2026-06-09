@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Osteopatia i Fisioteràpia | Sants, Barcelona</title>
+    <meta name="description" content="Osteopatía y fisioterapia en Sants (Barcelona). Tratamiento manual personalizado para aliviar el dolor, recuperar el movimiento y poner cada cosa en su sitio. Pide cita por WhatsApp.">
+    <meta property="og:title" content="Marina Osteopatia i Fisioteràpia · Barcelona">
+    <meta property="og:description" content="Osteopatía y fisioterapia personalizada en Sants-Montjuïc. Ponemos cada cosa en su sitio. Tú incluido.">
+    <meta property="og:image" content="Foto1.png">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ============================================================
+           TEMA MODIFICABLE  —  CAMBIA SOLO ESTO PARA OTRO CLIENTE
+           (perfil: FISIO / OSTEOPATÍA -> blanco limpio + teal sereno)
+           ============================================================ */
+        :root {
+            --brand:      #2F8E84;   /* Teal eucalipto (acento principal) */
+            --brand-dark: #246B63;   /* Teal oscuro (hover) */
+            --accent:     #C8A26A;   /* Arena cálida (acento secundario) */
+            --bg:         #FFFFFF;   /* Blanco limpio (fondo) */
+            --surface:    #FFFFFF;   /* Superficie de tarjetas */
+            --surface-2:  #F1F7F5;   /* Verde-agua muy claro (superficie alt.) */
+            --text:       #1E2A28;   /* Pizarra oscura (texto) */
+            --muted:      #65736F;   /* Gris suave (texto secundario) */
+            --font-head:  'Poppins', sans-serif;  /* titulares */
+            --font-body:  'Mulish', sans-serif;   /* cuerpo */
+        }
+        /* ============================================================ */
+
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); font-weight: 400; }
+        h1,h2,h3,.font-head { font-family: var(--font-head); }
+        html { scroll-behavior: smooth; }
+        .kicker { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; }
+        .hairline { width: 56px; height: 3px; border-radius: 3px; background: var(--brand); }
+        .lift { transition: transform .35s ease, box-shadow .35s ease; }
+        .lift:hover { transform: translateY(-6px); box-shadow: 0 24px 40px -28px rgba(30,42,40,.45); }
+        .blob { background: radial-gradient(circle at 30% 30%, var(--surface-2), #E4F0EC); }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen antialiased">
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300" style="background: rgba(255,255,255,.0);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="#inicio" class="font-head text-lg font-700 font-semibold leading-tight">Marina<span style="color: var(--brand);">.</span><br class="hidden"><span class="block text-[11px] kicker font-medium" style="color: var(--muted);">Osteopatia i Fisioteràpia</span></a>
+            <nav class="hidden md:flex items-center gap-9 text-sm" aria-label="Navegación principal">
+                <a href="#servicios" class="hover:text-[var(--brand)] transition-colors">Servicios</a>
+                <a href="#sobre" class="hover:text-[var(--brand)] transition-colors">Sobre Marina</a>
+                <a href="#visita" class="hover:text-[var(--brand)] transition-colors">Tu visita</a>
+                <a href="#contacto" class="hover:text-[var(--brand)] transition-colors">Contacto</a>
+            </nav>
+            <a href="https://wa.me/34657172315?text=Hola%20Marina%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" class="hidden md:inline-block px-6 py-2.5 text-xs kicker text-white rounded-full transition-colors hover:bg-[var(--brand-dark)]" style="background: var(--brand);">Pedir cita</a>
+            <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Abrir menú">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t" style="background: var(--bg); border-color: var(--surface-2);">
+        <div class="px-6 py-4 flex flex-col gap-3 text-sm">
+            <a href="#servicios" class="py-1.5">Servicios</a>
+            <a href="#sobre" class="py-1.5">Sobre Marina</a>
+            <a href="#visita" class="py-1.5">Tu visita</a>
+            <a href="#contacto" class="py-1.5">Contacto</a>
+            <a href="https://wa.me/34657172315?text=Hola%20Marina%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" class="mt-2 inline-block text-center px-6 py-2.5 text-xs kicker text-white rounded-full" style="background: var(--brand);">Pedir cita</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="relative pt-28 pb-20 sm:pt-36 sm:pb-28" style="background: var(--bg);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+            <p class="kicker" style="color: var(--brand);">Osteopatía · Fisioterapia · Barcelona</p>
+            <h1 class="mt-5 font-head text-4xl sm:text-5xl lg:text-6xl font-700 font-bold leading-[1.05]">
+                Ponemos cada cosa<br>en su sitio.<br><span style="color: var(--brand);">Tú incluido.</span>
+            </h1>
+            <p class="mt-6 text-lg leading-relaxed max-w-xl" style="color: var(--muted);">
+                Tratamiento manual personalizado para aliviar el dolor, recuperar la movilidad y volver a sentirte bien. Sin prisas y con un plan pensado solo para ti.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-4">
+                <a href="https://wa.me/34657172315?text=Hola%20Marina%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-7 py-3.5 text-xs kicker text-white rounded-full transition-colors hover:bg-[var(--brand-dark)]" style="background: var(--brand);">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.115zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Pedir cita por WhatsApp
+                </a>
+                <a href="tel:+34657172315" class="px-7 py-3.5 text-xs kicker rounded-full border transition-colors hover:bg-[var(--surface-2)]" style="border-color: var(--brand); color: var(--brand);">Llamar 657 172 315</a>
+            </div>
+            <div class="mt-9 flex flex-wrap gap-x-8 gap-y-3 text-sm" style="color: var(--muted);">
+                <span class="flex items-center gap-2"><span style="color: var(--brand);">✓</span> Primera valoración completa</span>
+                <span class="flex items-center gap-2"><span style="color: var(--brand);">✓</span> Trato cercano y sin prisas</span>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="blob absolute -inset-4 sm:-inset-6 rounded-[2.5rem] -z-0"></div>
+            <div class="relative z-10 overflow-hidden rounded-[2rem] shadow-xl">
+                <img src="Foto1.png" alt="Marina, osteópata y fisioterapeuta" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-20 -mt-10 ml-4 sm:ml-6 inline-block bg-white rounded-2xl shadow-lg px-6 py-4 border" style="border-color: var(--surface-2);">
+                <p class="font-head text-lg font-semibold leading-tight">Marina</p>
+                <p class="text-sm" style="color: var(--muted);">Osteópata · Fisioterapeuta</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-20 sm:py-28" style="background: var(--surface-2);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl">
+            <p class="kicker" style="color: var(--brand);">Servicios</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight">Cuidamos de tu cuerpo, de raíz</h2>
+            <div class="hairline mt-5"></div>
+            <p class="mt-6 text-base leading-relaxed" style="color: var(--muted);">Cada tratamiento empieza por entender qué te pasa. Después, manos a la obra con la técnica que mejor se adapta a ti.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E6EFEC;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Osteopatía</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Valoración global del cuerpo para encontrar el origen del problema, no solo el síntoma, y devolver el equilibrio.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E6EFEC;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Fisioterapia</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Recuperación de lesiones, contracturas y dolor con terapia manual y ejercicio terapéutico adaptado.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E6EFEC;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Terapia manual</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Técnicas suaves y precisas para liberar tensiones, mejorar la movilidad y aliviar molestias articulares.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E6EFEC;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Punción seca</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Tratamiento eficaz de los puntos gatillo musculares para soltar la tensión profunda y el dolor referido.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E6EFEC;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Dolor de espalda y cuello</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Cervicalgias, lumbalgias y malas posturas del día a día. Te ayudamos a moverte sin dolor.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E6EFEC;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Ejercicio terapéutico</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Pautas y ejercicios para que la mejora dure en el tiempo y no vuelvas a recaer.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE MARINA -->
+<section id="sobre" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+            <p class="kicker" style="color: var(--brand);">Sobre Marina</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Manos que escuchan a tu cuerpo</h2>
+            <div class="hairline mt-5"></div>
+            <p class="mt-6 text-base leading-relaxed" style="color: var(--muted);">
+                Soy <span style="color: var(--text);">Marina</span>, osteópata y fisioterapeuta. Creo en un trato cercano, en dedicarte el tiempo que necesitas y en explicarte siempre qué te pasa y por qué.
+            </p>
+            <p class="mt-4 text-base leading-relaxed" style="color: var(--muted);">
+                En mi consulta de <span style="color: var(--text);">Sants</span> trabajo con un objetivo claro: que salgas mejor de como entraste y que cada cosa vuelva a su sitio, empezando por cómo te sientes.
+            </p>
+            <div class="mt-8 grid grid-cols-3 gap-6">
+                <div>
+                    <p class="font-head text-3xl font-bold" style="color: var(--brand);">100%</p>
+                    <p class="text-xs kicker mt-2" style="color: var(--muted);">Personalizado</p>
+                </div>
+                <div>
+                    <p class="font-head text-3xl font-bold" style="color: var(--brand);">1 a 1</p>
+                    <p class="text-xs kicker mt-2" style="color: var(--muted);">Sin prisas</p>
+                </div>
+                <div>
+                    <p class="font-head text-3xl font-bold" style="color: var(--brand);">Sants</p>
+                    <p class="text-xs kicker mt-2" style="color: var(--muted);">Barcelona</p>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 lg:order-2">
+            <div class="overflow-hidden rounded-[2rem] shadow-lg max-w-md mx-auto">
+                <img src="Foto1.png" alt="Marina en su consulta de osteopatía y fisioterapia" class="w-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TU VISITA -->
+<section id="visita" class="py-20 sm:py-28" style="background: var(--surface-2);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl">
+            <p class="kicker" style="color: var(--brand);">Cómo es tu visita</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight">Sencillo, claro y a tu ritmo</h2>
+            <div class="hairline mt-5"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 mt-14">
+            <div class="bg-white rounded-2xl p-8 border" style="border-color: #E6EFEC;">
+                <p class="font-head text-sm font-bold" style="color: var(--accent);">01</p>
+                <h3 class="font-head text-xl font-semibold mt-3">Te escuchamos</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Hablamos de lo que te pasa, tu historia y tus objetivos. Una valoración completa para entender el origen.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border" style="border-color: #E6EFEC;">
+                <p class="font-head text-sm font-bold" style="color: var(--accent);">02</p>
+                <h3 class="font-head text-xl font-semibold mt-3">Tratamiento a medida</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Aplicamos la técnica que mejor encaja contigo: osteopatía, fisioterapia, terapia manual o punción seca.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border" style="border-color: #E6EFEC;">
+                <p class="font-head text-sm font-bold" style="color: var(--accent);">03</p>
+                <h3 class="font-head text-xl font-semibold mt-3">Plan para mantenerte bien</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Te llevas pautas y ejercicios para que la mejora dure y vuelvas a tu vida sin molestias.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div>
+            <p class="kicker" style="color: var(--brand);">Contacto y cita</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Pide tu cita hoy</h2>
+            <div class="hairline mt-5"></div>
+            <p class="mt-6 text-base leading-relaxed" style="color: var(--muted);">Escríbeme por WhatsApp o llámame y buscamos el hueco que mejor te venga. Estoy en el barrio de Sants.</p>
+
+            <div class="mt-9 space-y-6">
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9742;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Teléfono / WhatsApp</p>
+                        <a href="tel:+34657172315" class="text-lg font-medium hover:underline">657 172 315</a>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9737;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Dirección</p>
+                        <p class="text-lg font-medium">Carrer d'Olzinelles, 85</p>
+                        <p class="text-sm" style="color: var(--muted);">Sants-Montjuïc, 08014 Barcelona</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9788;</span>
+                    <div class="w-full">
+                        <p class="text-xs kicker mb-2" style="color: var(--muted);">Horario</p>
+                        <ul class="text-[15px] space-y-1.5">
+                            <li class="flex justify-between gap-4 max-w-xs"><span>Lunes a jueves</span><span style="color: var(--muted);">9:00–20:00</span></li>
+                            <li class="flex justify-between gap-4 max-w-xs"><span>Viernes</span><span style="color: var(--muted);">9:00–15:00</span></li>
+                            <li class="flex justify-between gap-4 max-w-xs"><span>Sábado y domingo</span><span style="color: var(--muted);">Cerrado</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <a href="https://wa.me/34657172315?text=Hola%20Marina%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 px-8 py-3.5 text-xs kicker text-white rounded-full" style="background:#25D366;">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.115zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Escríbeme por WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg min-h-[380px]">
+            <iframe
+                title="Ubicación de Marina Osteopatia i Fisioteràpia"
+                src="https://www.google.com/maps?q=Carrer+d'Olzinelles+85,+08014+Barcelona&output=embed"
+                class="w-full h-full min-h-[380px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-auto py-10 border-t" style="border-color: var(--surface-2);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+        <div>
+            <p class="font-head text-lg font-semibold">Marina Osteopatia i Fisioteràpia</p>
+            <p class="text-sm mt-1" style="color: var(--muted);">Carrer d'Olzinelles, 85 · Sants-Montjuïc · Barcelona</p>
+        </div>
+        <div class="flex items-center gap-7 text-sm" style="color: var(--muted);">
+            <a href="#servicios" class="hover:text-[var(--text)]">Servicios</a>
+            <a href="#sobre" class="hover:text-[var(--text)]">Sobre Marina</a>
+            <a href="#contacto" class="hover:text-[var(--text)]">Contacto</a>
+        </div>
+        <p class="text-xs" style="color: var(--muted);">© <span id="year"></span> Marina Osteopatia i Fisioteràpia</p>
+    </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/34657172315?text=Hola%20Marina%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp"
+   class="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background:#25D366;">
+    <svg class="h-7 w-7 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.115zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    const nav = document.getElementById('nav');
+    function onScroll() {
+        if (window.scrollY > 30) {
+            nav.style.background = 'rgba(255,255,255,.92)';
+            nav.style.backdropFilter = 'blur(8px)';
+            nav.style.boxShadow = '0 8px 24px -18px rgba(30,42,40,.5)';
+        } else {
+            nav.style.background = 'rgba(255,255,255,0)';
+            nav.style.backdropFilter = 'none';
+            nav.style.boxShadow = 'none';
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
